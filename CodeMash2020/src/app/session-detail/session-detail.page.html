@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SessionDetail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [href]="'/session-picture'" slot="end">
+        <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{sessionData.getSessionType(session).toUpperCase()}}</ion-card-subtitle>
+      <ion-card-title>{{session.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let speaker of session.speakers">
+        {{speaker.name}}
+      </div>
+      <div>Room: {{session.room}}</div>
+      <div>{{session.startsAt | date: "EEEE, MMMM d, y h:mm a"}}</div><br>
+      <ion-badge *ngFor="let tag of sessionData.getSessionTags(session)" item-end>{{tag.name}}</ion-badge>
+      <br>
+      <h3>{{session.description}}</h3>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button  [href]="'/session-picture'">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

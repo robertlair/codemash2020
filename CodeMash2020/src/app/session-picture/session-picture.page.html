@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SessionPicture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img *ngIf="imageTaken" [src]="image" />
+  <ion-button (click)="takePhoto()">Take Picture</ion-button>
+</ion-content>

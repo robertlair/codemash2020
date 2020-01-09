@@ -1,0 +1,8 @@
+{
+  "appId": "com.lifequeststudios.codemash2020",
+  "appName": "CodeMash 2020",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

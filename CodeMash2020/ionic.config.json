@@ -1,0 +1,7 @@
+{
+  "name": "CodeMash2020",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
